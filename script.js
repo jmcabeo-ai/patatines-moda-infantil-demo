@@ -1,4 +1,5 @@
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const hasFinePointer = window.matchMedia('(pointer: fine)').matches;
 
 document.documentElement.classList.add('js');
 
@@ -6,6 +7,47 @@ const intro = document.querySelector('.intro');
 const hideIntro = () => intro?.classList.add('is-hidden');
 window.setTimeout(hideIntro, prefersReducedMotion ? 0 : 1050);
 window.addEventListener('load', () => window.setTimeout(hideIntro, prefersReducedMotion ? 0 : 600));
+
+const replayClass = (element, className) => {
+  if (!element || prefersReducedMotion) return;
+  element.classList.remove(className);
+  void element.offsetWidth;
+  element.classList.add(className);
+};
+
+const cursorAura = document.querySelector('.cursor-aura');
+if (!prefersReducedMotion && hasFinePointer && cursorAura) {
+  let cursorFrame;
+  document.addEventListener('pointermove', event => {
+    if (cursorFrame) window.cancelAnimationFrame(cursorFrame);
+    cursorFrame = window.requestAnimationFrame(() => {
+      cursorAura.classList.add('is-active');
+      cursorAura.style.transform = `translate3d(${event.clientX - cursorAura.offsetWidth / 2}px, ${event.clientY - cursorAura.offsetHeight / 2}px, 0)`;
+    });
+  }, { passive: true });
+  document.addEventListener('pointerleave', () => cursorAura.classList.remove('is-active'));
+  document.querySelectorAll('a, button, summary').forEach(element => {
+    element.addEventListener('pointerenter', () => cursorAura.classList.add('is-over-action'));
+    element.addEventListener('pointerleave', () => cursorAura.classList.remove('is-over-action'));
+  });
+  document.addEventListener('pointerdown', event => {
+    const colors = ['#f25f68', '#ffe18a', '#78bca7', '#c6afe8'];
+    Array.from({ length: 6 }, (_, index) => {
+      const angle = (Math.PI * 2 * index) / 6;
+      const distance = 30 + (index % 2) * 14;
+      const spark = document.createElement('i');
+      spark.className = 'click-spark';
+      spark.style.left = `${event.clientX}px`;
+      spark.style.top = `${event.clientY}px`;
+      spark.style.setProperty('--spark-x', `${Math.cos(angle) * distance}px`);
+      spark.style.setProperty('--spark-y', `${Math.sin(angle) * distance}px`);
+      spark.style.setProperty('--spark-r', `${120 + index * 48}deg`);
+      spark.style.setProperty('--spark-color', colors[index % colors.length]);
+      document.body.appendChild(spark);
+      spark.addEventListener('animationend', () => spark.remove(), { once: true });
+    });
+  });
+}
 
 const header = document.querySelector('[data-header]');
 const mascotHelper = document.querySelector('.mascot-helper');
@@ -78,7 +120,8 @@ const ageData = {
 const ageEls = {
   image: document.querySelector('#age-image'), number: document.querySelector('#age-number'),
   kicker: document.querySelector('#age-kicker'), title: document.querySelector('#age-title'),
-  text: document.querySelector('#age-text'), tags: document.querySelector('#age-tags'), cta: document.querySelector('#age-cta')
+  text: document.querySelector('#age-text'), tags: document.querySelector('#age-tags'), cta: document.querySelector('#age-cta'),
+  card: document.querySelector('.age-card')
 };
 document.querySelectorAll('.age-tab').forEach(tab => tab.addEventListener('click', () => {
   const data = ageData[tab.dataset.age];
@@ -97,6 +140,7 @@ document.querySelectorAll('.age-tab').forEach(tab => tab.addEventListener('click
     ageEls.tags.innerHTML = data.tags.map(tag => `<span>${tag}</span>`).join('');
     ageEls.cta.href = `https://wa.me/34623992413?text=${encodeURIComponent(`Hola Patatines, busco ${data.query}. ¿Me ayudáis a elegir?`)}`;
     ageEls.image.classList.remove('is-changing');
+    replayClass(ageEls.card, 'is-celebrating');
   }, prefersReducedMotion ? 0 : 180);
 }));
 
@@ -120,6 +164,7 @@ function updateGiftResult() {
   cta.href = `https://wa.me/34623992413?text=${encodeURIComponent(`Hola Patatines, busco un regalo para ${giftChoices[1]}, para ${giftChoices[2]}. ¿Me enseñáis algunas opciones?`)}`;
   cta.target = '_blank';
   cta.rel = 'noopener';
+  replayClass(result, 'is-celebrating');
 }
 
 document.querySelectorAll('.faq details').forEach(detail => detail.addEventListener('toggle', () => {
@@ -137,9 +182,46 @@ if (!prefersReducedMotion) {
     const y = (event.clientY - rect.top) / rect.height - 0.5;
     parallax.style.setProperty('--mx', `${x * 12}px`);
     parallax.style.setProperty('--my', `${y * 12}px`);
+    parallax.style.setProperty('--toy-x', `${x * -22}px`);
+    parallax.style.setProperty('--toy-y', `${y * -18}px`);
   });
   parallax?.addEventListener('pointerleave', () => {
     parallax.style.setProperty('--mx', '0px');
     parallax.style.setProperty('--my', '0px');
+    parallax.style.setProperty('--toy-x', '0px');
+    parallax.style.setProperty('--toy-y', '0px');
   });
+
+  if (hasFinePointer) {
+    document.querySelectorAll('.look-card').forEach(card => {
+      card.addEventListener('pointermove', event => {
+        const rect = card.getBoundingClientRect();
+        const x = (event.clientX - rect.left) / rect.width;
+        const y = (event.clientY - rect.top) / rect.height;
+        card.style.setProperty('--pointer-x', `${x * 100}%`);
+        card.style.setProperty('--pointer-y', `${y * 100}%`);
+        card.style.setProperty('--shift-x', `${(x - .5) * -16}px`);
+        card.style.setProperty('--shift-y', `${(y - .5) * -12}px`);
+      });
+      card.addEventListener('pointerleave', () => {
+        card.style.setProperty('--pointer-x', '50%');
+        card.style.setProperty('--pointer-y', '50%');
+        card.style.setProperty('--shift-x', '0px');
+        card.style.setProperty('--shift-y', '0px');
+      });
+    });
+
+    const finalCta = document.querySelector('.final-cta');
+    finalCta?.addEventListener('pointermove', event => {
+      const rect = finalCta.getBoundingClientRect();
+      const x = (event.clientX - rect.left) / rect.width - .5;
+      const y = (event.clientY - rect.top) / rect.height - .5;
+      finalCta.style.setProperty('--cta-x', `${x * 24}px`);
+      finalCta.style.setProperty('--cta-y', `${y * 18}px`);
+    });
+    finalCta?.addEventListener('pointerleave', () => {
+      finalCta.style.setProperty('--cta-x', '0px');
+      finalCta.style.setProperty('--cta-y', '0px');
+    });
+  }
 }
