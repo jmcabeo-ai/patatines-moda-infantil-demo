@@ -9,7 +9,7 @@
 - [x] Selección y optimización de recursos visuales.
 - [x] Implementación interactiva y responsive.
 - [x] Verificación técnica y funcional.
-- [ ] Publicación y URL pública.
+- [x] Publicación y URL pública.
 
 ## Objetivo
 
@@ -27,6 +27,7 @@ Crear una demostración web con identidad propia para Patatines Moda Infantil, o
 - 2026-09-24: identidad planteada como boutique infantil editorial, cálida y juguetona; se incorporan selector por edades, recomendador de regalos, contacto por WhatsApp y visita a tienda.
 - 2026-09-24: fotografías públicas recientes del perfil oficial descargadas como recursos locales para evitar dependencias temporales de Instagram.
 - 2026-09-24: validación responsive en 390 px y 1440 px; pruebas automatizadas de selectores, recomendador, acordeones y enlaces; Lighthouse 100 en accesibilidad, buenas prácticas y SEO.
+- 2026-09-24: publicada en https://jmcabeo-ai.github.io/patatines-moda-infantil-demo/
 
 ## Fuentes consultadas
 
