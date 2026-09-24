@@ -31,6 +31,7 @@ Crear una demostración web con identidad propia para Patatines Moda Infantil, o
 - 2026-09-24: fondos rediseñados con bloques pastel más vivos — amarillo sol, rosa, lavanda, menta y azul cielo — para reforzar el carácter infantil sin perder la estética boutique ni la legibilidad; revisión responsive superada y Lighthouse 99/100/100/100.
 - 2026-09-24: añadidos personajes vectoriales originales con saludo, parpadeo y movimiento suave, asistente flotante de tallas enlazado a WhatsApp y stickers animados en el cierre; todo respeta la preferencia de movimiento reducido y mantiene Lighthouse 99/100/100/100.
 - 2026-09-24: segunda capa de motion design: gradientes vivos, parallax reactivo en personajes y cierre, profundidad en tarjetas, entradas escalonadas, confeti contextual y estela de interacción para puntero fino; validada sin regresiones y con Lighthouse 99/100/100/100.
+- 2026-09-25: motion móvil reforzado tras detectar que los efectos de puntero no eran perceptibles en táctil: saludo visible en portada, fotografías flotantes, fondos más dinámicos, entradas elásticas, marcas en movimiento y asistente animado sobre la barra de contacto; validación a 390 px superada y Lighthouse 99/100/100/100.
 
 ## Fuentes consultadas
 

@@ -51,15 +51,16 @@ if (!prefersReducedMotion && hasFinePointer && cursorAura) {
 
 const header = document.querySelector('[data-header]');
 const mascotHelper = document.querySelector('.mascot-helper');
+const mascotThreshold = window.innerWidth <= 820 ? 180 : 620;
 let lastScroll = 0;
 window.addEventListener('scroll', () => {
   const current = window.scrollY;
   header?.classList.toggle('is-scrolled', current > 24);
   header?.classList.toggle('is-hidden', current > lastScroll && current > 220);
-  mascotHelper?.classList.toggle('is-visible', current > 620);
+  mascotHelper?.classList.toggle('is-visible', current > mascotThreshold);
   lastScroll = current;
 }, { passive: true });
-mascotHelper?.classList.toggle('is-visible', window.scrollY > 620);
+mascotHelper?.classList.toggle('is-visible', window.scrollY > mascotThreshold);
 
 const menuToggle = document.querySelector('.menu-toggle');
 const mobileMenu = document.querySelector('#mobile-menu');
