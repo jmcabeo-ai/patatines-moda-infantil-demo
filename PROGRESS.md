@@ -28,6 +28,7 @@ Crear una demostración web con identidad propia para Patatines Moda Infantil, o
 - 2026-09-24: fotografías públicas recientes del perfil oficial descargadas como recursos locales para evitar dependencias temporales de Instagram.
 - 2026-09-24: validación responsive en 390 px y 1440 px; pruebas automatizadas de selectores, recomendador, acordeones y enlaces; Lighthouse 100 en accesibilidad, buenas prácticas y SEO.
 - 2026-09-24: publicada en https://jmcabeo-ai.github.io/patatines-moda-infantil-demo/
+- 2026-09-24: fondos rediseñados con bloques pastel más vivos — amarillo sol, rosa, lavanda, menta y azul cielo — para reforzar el carácter infantil sin perder la estética boutique ni la legibilidad; revisión responsive superada y Lighthouse 99/100/100/100.
 
 ## Fuentes consultadas
 
