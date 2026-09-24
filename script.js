@@ -8,13 +8,16 @@ window.setTimeout(hideIntro, prefersReducedMotion ? 0 : 1050);
 window.addEventListener('load', () => window.setTimeout(hideIntro, prefersReducedMotion ? 0 : 600));
 
 const header = document.querySelector('[data-header]');
+const mascotHelper = document.querySelector('.mascot-helper');
 let lastScroll = 0;
 window.addEventListener('scroll', () => {
   const current = window.scrollY;
   header?.classList.toggle('is-scrolled', current > 24);
   header?.classList.toggle('is-hidden', current > lastScroll && current > 220);
+  mascotHelper?.classList.toggle('is-visible', current > 620);
   lastScroll = current;
 }, { passive: true });
+mascotHelper?.classList.toggle('is-visible', window.scrollY > 620);
 
 const menuToggle = document.querySelector('.menu-toggle');
 const mobileMenu = document.querySelector('#mobile-menu');
