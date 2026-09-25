@@ -1,0 +1,42 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Mostrador Patatines · TPV de demostración</title><link rel="icon" href="favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css?v=20260925-mobile-motion"><link rel="stylesheet" href="shop.css?v=20260925-shop"></head>
+<body class="pos-page" data-mode="pos"><a class="skip-link" href="#mostrador">Saltar al mostrador</a><div class="demo-bar"><strong>TPV DEMO · SIN COBROS REALES</strong><span>Stock compartido solo en este navegador. No es Shopify POS.</span></div>
+<header class="pos-header"><a class="brand" href="index.html"><img src="assets/logo-instagram.jpg" alt="" width="44" height="44"><span><strong>Patatines</strong><small>El mostrador</small></span></a><div><a href="index.html#catalogo">Ver tienda online ↗</a><button class="button" data-reset-demo>Reiniciar solo esta demo</button></div></header>
+<main class="pos-layout" id="mostrador"><section class="pos-products"><div class="pos-intro"><div><p class="eyebrow">Tu tienda, en una pantalla</p><h1>Hola, Patatines.</h1><p>Selecciona una prenda y su talla. Completa un ticket de prueba y comprueba el stock en la web. La versión real necesitará plataforma, dispositivos y configuración.</p></div><div class="pos-stats"><div><small>Unidades demo</small><strong id="stock-count">0</strong></div><div><small>Ventas simuladas</small><strong id="sales-count">0</strong></div></div></div>
+<div class="shop-categories" aria-label="Filtrar catálogo"><button data-category="all" aria-pressed="true">Todo</button><button data-category="bebe" aria-pressed="false">Bebé</button><button data-category="junior" aria-pressed="false">Kids</button><button data-category="abrigos" aria-pressed="false">Abrigos</button><button data-category="regalos" aria-pressed="false">Regalos</button></div>
+<div class="shop-toolbar">
+          <label class="shop-search"><span>Encuentra su próximo favorito</span><input type="search" id="shop-search" placeholder="Prenda, marca o color…" autocomplete="off"></label>
+          <label class="filter-select"><span>Marca</span><select id="brand-filter"><option value="all">Todas las marcas</option><option>Abel &amp; Lula</option><option>Mac Ilusión</option><option>Mayoral</option><option>Little Dutch</option></select></label>
+          <label class="filter-select"><span>Ordenar</span><select id="sort-products"><option value="selected">Selección Patatines</option><option value="low">Precio: menor a mayor</option><option value="high">Precio: mayor a menor</option></select></label>
+        </div>
+<div class="shop-meta"><p id="product-count" aria-live="polite"></p><button data-reset-filters>Limpiar filtros</button></div><div class="product-grid" id="product-grid"></div></section>
+<aside class="pos-ticket" aria-label="Ticket de prueba"><div class="cart-inner"><p class="eyebrow">Venta de mostrador</p><h2>Nuevo ticket <small>· <span data-cart-count>0</span></small></h2><p class="cart-notice">Cliente de prueba · sin datos personales</p><div id="cart-lines" class="cart-lines"></div><div class="cart-summary"><div class="total-line"><span>Total demo</span><strong id="cart-subtotal"></strong></div><button class="button button--coral" id="cart-checkout">Ir al cobro de prueba ↗</button><p class="demo-fine">No se emiten facturas, no se cobran tarjetas y no se guardan pedidos en servidores.</p></div></div></aside></main>
+<footer><p>Demostración conceptual de mostrador + tienda online. No utilizar para operar el negocio ni cobrar a clientes.</p></footer>
+<dialog id="product-modal" class="shop-dialog" aria-labelledby="product-title"><button type="button" class="dialog-close" data-close aria-label="Cerrar ficha de producto">×</button><div id="product-detail" class="product-detail"></div></dialog>
+<dialog id="checkout-modal" class="shop-dialog checkout-dialog" aria-labelledby="checkout-title">
+    <button type="button" class="dialog-close" data-close aria-label="Cerrar compra de prueba">×</button>
+    <div class="checkout-inner">
+      <form id="checkout-form">
+        <p class="eyebrow">Solo estamos probando</p>
+        <h2 id="checkout-title">Cerrar ticket de prueba.</h2>
+        <p class="checkout-demo-note">Simulación sin cobros. No introduzcas datos personales ni tarjetas. No se envía ningún pedido a Patatines.</p>
+        <fieldset><legend>Método de cobro simulado</legend>
+          <label class="delivery-option"><input type="radio" name="delivery" value="pickup" checked><span>Tarjeta · demo<small>No conecta ningún datáfono</small></span></label>
+          <label class="delivery-option"><input type="radio" name="delivery" value="cash"><span>Efectivo · demo<small>No registra un movimiento de caja real</small></span></label>
+        </fieldset>
+        <p>Gastos adicionales <strong id="checkout-shipping"></strong></p>
+        <div class="total-line"><span>Total de prueba</span><strong id="checkout-total"></strong></div>
+        <p class="field-error" id="checkout-error" role="alert"></p>
+        <button type="submit" class="button button--coral">Simular cobro · sin dinero real ↗</button>
+        <p class="demo-fine">Importes y stock ficticios. No es un checkout de Shopify ni una pasarela bancaria.</p>
+      </form>
+      <div id="checkout-success" hidden>
+        <div class="success-mark" aria-hidden="true">✓</div><p class="eyebrow">Así de fácil podría ser</p>
+        <h2>¡Prueba completada!</h2><p>No se ha cobrado nada ni se ha enviado un pedido.</p>
+        <div class="order-receipt"><span id="order-number"></span><strong id="order-total"></strong><small>Sin valor fiscal · simulación local</small></div>
+        <p>El stock de prueba se ha actualizado. Puedes verlo también en la demo de caja dentro de este mismo navegador.</p>
+        <button type="button" class="button button--ink" data-close>Seguir explorando</button>
+      </div>
+    </div>
+  </dialog>
+<div class="shop-toast" id="shop-toast" role="status" aria-live="polite"></div>
+<script src="catalog.js?v=20260925-shop"></script><script src="shop.js?v=20260925-shop"></script></body></html>

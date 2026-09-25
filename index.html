@@ -5,17 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Patatines Moda Infantil: ropa, accesorios y regalos para peques de 0 a 14 años en El Ejido, Almería.">
   <meta name="theme-color" content="#fffcf6">
+  <meta name="robots" content="noindex,nofollow">
   <meta property="og:title" content="Patatines Moda Infantil · El Ejido">
   <meta property="og:description" content="Qué bien les queda crecer. Moda infantil, primera puesta, accesorios y regalos.">
   <meta property="og:image" content="assets/instagram-10.jpg">
   <link rel="canonical" href="https://jmcabeo-ai.github.io/patatines-moda-infantil-demo/">
-  <title>Patatines · Moda infantil en El Ejido</title>
+  <title>Patatines · Tienda online de moda infantil | Preview</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet"></noscript>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css?v=20260925-mobile-motion">
+  <link rel="stylesheet" href="shop.css?v=20260925-shop">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -36,7 +38,7 @@
   }
   </script>
 </head>
-<body>
+<body data-mode="web">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
   <div class="cursor-aura" aria-hidden="true"></div>
 
@@ -48,10 +50,11 @@
     <p>Pequeñas prendas. Grandes historias.</p>
   </div>
 
+  <div class="demo-bar"><span><strong>PREVIEW DE TIENDA</strong> · Puedes probarla. Precios y stock simulados. Sin cobros.</span><a href="tpv.html">Probar TPV ↗</a></div>
   <div class="announcement">
     <div class="announcement__track" aria-label="Ventajas de compra">
-      <span>Envíos 48/72 h</span><i></i><span>Gratis desde 60 €</span><i></i><span>Tallas 00 — 14 años</span><i></i><span>Tienda en El Ejido</span><i></i>
-      <span aria-hidden="true">Envíos 48/72 h</span><i aria-hidden="true"></i><span aria-hidden="true">Gratis desde 60 €</span><i aria-hidden="true"></i><span aria-hidden="true">Tallas 00 — 14 años</span><i aria-hidden="true"></i><span aria-hidden="true">Tienda en El Ejido</span>
+      <span>Moda para crecer</span><i></i><span>Pequeños grandes looks</span><i></i><span>Tallas 00 — 14 años</span><i></i><span>Tienda en El Ejido</span><i></i>
+      <span aria-hidden="true">Moda para crecer</span><i aria-hidden="true"></i><span aria-hidden="true">Pequeños grandes looks</span><i aria-hidden="true"></i><span aria-hidden="true">Tallas 00 — 14 años</span><i aria-hidden="true"></i><span aria-hidden="true">Tienda en El Ejido</span>
     </div>
   </div>
 
@@ -61,19 +64,20 @@
       <span><strong>Patatines</strong><small>Moda infantil</small></span>
     </a>
     <nav class="desktop-nav" aria-label="Navegación principal">
-      <a href="#edades">Por edad</a>
-      <a href="#colecciones">Colecciones</a>
-      <a href="#regalo">Regalos</a>
+      <a href="#catalogo">Comprar</a>
+      <a href="#catalogo" data-shop-category="bebe">Bebé</a>
+      <a href="#catalogo" data-shop-category="regalos">Regalos</a>
       <a href="#tienda">Tienda</a>
     </nav>
-    <a class="button button--ink header-cta" href="https://wa.me/34623992413?text=Hola%20Patatines%2C%20me%20gustar%C3%ADa%20que%20me%20ayudarais%20a%20encontrar%20una%20prenda." target="_blank" rel="noopener">Encontrar mi talla</a>
+    <div class="shop-header-actions"><button id="favorite-filter" class="shop-icon" aria-label="Ver favoritos" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span data-favorites-count>0</span></button><button class="shop-icon shop-icon--cart" data-open-cart aria-label="Abrir cesta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7ZM8 8V6a4 4 0 0 1 8 0v2"/></svg><span class="shop-cart-label">Mi cesta</span><span data-cart-count>0</span></button></div>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú">
       <span></span><span></span>
     </button>
     <div class="mobile-menu" id="mobile-menu" hidden>
-      <a href="#edades">Por edad</a>
-      <a href="#colecciones">Colecciones</a>
-      <a href="#regalo">Regalos</a>
+      <a href="#catalogo">Toda la colección</a>
+      <a href="#catalogo" data-shop-category="bebe">Bebé &amp; primera puesta</a>
+      <a href="#catalogo" data-shop-category="junior">Kids &amp; junior</a>
+      <a href="#catalogo" data-shop-category="regalos">Regalos</a>
       <a href="#tienda">Tienda</a>
       <a href="https://wa.me/34623992413" target="_blank" rel="noopener">Hablar con Patatines</a>
     </div>
@@ -91,10 +95,10 @@
       <div class="hero__copy reveal">
         <p class="eyebrow"><span></span> Moda infantil · El Ejido</p>
         <h1>Qué bien les<br><em>queda crecer.</em></h1>
-        <p class="hero__lead">Primera puesta, moda, accesorios y regalos elegidos con ese ojo que solo tiene una tienda de barrio que te conoce.</p>
+        <p class="hero__lead">Primera puesta, pequeños looks y regalos para sus grandes días. Elegidos con mimo en El Ejido. Ahora, un poquito más cerca.</p>
         <div class="hero__actions">
-          <a class="button button--coral" href="#edades">Descubrir por edad <span aria-hidden="true">↘</span></a>
-          <a class="text-link" href="https://www.instagram.com/patatines.moda.infantil/" target="_blank" rel="noopener">Ver novedades en Instagram <span aria-hidden="true">↗</span></a>
+          <a class="button button--coral" href="#catalogo">Entrar en la colección <span aria-hidden="true">↘</span></a>
+          <a class="text-link" href="#catalogo" data-shop-category="regalos">Un regalo que le encante <span aria-hidden="true">↗</span></a>
         </div>
         <div class="hero__note">
           <div class="avatar-stack" aria-hidden="true"><span>00</span><span>06</span><span>14</span></div>
@@ -194,6 +198,21 @@
       </div>
     </section>
 
+    <section class="shop-section" id="catalogo" aria-labelledby="shop-title">
+      <div class="shop-heading"><div><p class="eyebrow"><span></span> Pequeños favoritos, grandes historias</p><h2>Su próximo favorito.<br><em>Está por aquí.</em></h2></div><p>Prendas que has visto en nuestro Instagram, ahora en una experiencia de tienda que puedes probar.</p></div>
+      <div class="shop-categories" aria-label="Categorías de producto">
+        <button data-category="all" aria-pressed="true">Toda la colección</button><button data-category="bebe" aria-pressed="false">Bebé &amp; primera puesta</button><button data-category="mini" aria-pressed="false">Mini</button><button data-category="junior" aria-pressed="false">Kids &amp; junior</button><button data-category="abrigos" aria-pressed="false">Abrigos</button><button data-category="punto" aria-pressed="false">Punto</button><button data-category="regalos" aria-pressed="false">Regalos</button>
+      </div>
+<div class="shop-toolbar">
+          <label class="shop-search"><span>Encuentra su próximo favorito</span><input type="search" id="shop-search" placeholder="Prenda, marca o color…" autocomplete="off"></label>
+          <label class="filter-select"><span>Marca</span><select id="brand-filter"><option value="all">Todas las marcas</option><option>Abel &amp; Lula</option><option>Mac Ilusión</option><option>Mayoral</option><option>Little Dutch</option></select></label>
+          <label class="filter-select"><span>Ordenar</span><select id="sort-products"><option value="selected">Selección Patatines</option><option value="low">Precio: menor a mayor</option><option value="high">Precio: mayor a menor</option></select></label>
+        </div>
+      <div class="shop-meta"><p><strong id="product-count" aria-live="polite"></strong> · Precios y stock de demostración</p><button data-reset-filters>Limpiar filtros</button></div>
+      <div id="product-grid" class="product-grid"></div>
+      <noscript><p>Activa JavaScript para probar el catálogo y la cesta. <a href="https://www.instagram.com/patatines.moda.infantil/">Puedes ver las prendas en Instagram.</a></p></noscript>
+      <div class="shop-story"><div><p class="eyebrow">De la pantalla a sus manos</p><h3>La tienda de siempre.<br>Un poquito más cerca.</h3><p>Elige la prenda, encuentra su talla y prueba la cesta. También puedes simular la recogida en nuestra tienda de El Ejido.</p><a class="text-link" href="#tienda">Conoce la tienda ↗</a></div><div class="story-side"><p class="eyebrow">Una idea para Patatines</p><h3>Online y mostrador.<br>En el mismo equipo.</h3><p>Hemos preparado una demo de caja para mostrar cómo sería trabajar con las tallas y las ventas en un mismo sistema.</p><a class="button button--ink" href="tpv.html">Probar el mostrador ↗</a><p class="demo-fine">Simulación local. No conecta un datáfono ni sincroniza dispositivos reales.</p></div></div>
+    </section>
     <section class="age-finder section" id="edades">
       <div class="section-heading reveal">
         <p class="eyebrow"><span></span> Crecer cambia el armario</p>
@@ -221,7 +240,7 @@
             <h3 id="age-title">Suave para su piel.<br>Bonito para siempre.</h3>
             <p id="age-text">Peleles, conjuntos de varias piezas y prendas pensadas para regalar —o para guardar en la memoria.</p>
             <div class="tag-list" id="age-tags"><span>Peleles</span><span>Conjuntos</span><span>Regalos</span></div>
-            <a class="button button--ink" id="age-cta" href="https://wa.me/34623992413?text=Hola%20Patatines%2C%20busco%20ropa%20de%20primera%20puesta." target="_blank" rel="noopener">Quiero ayuda para elegir</a>
+            <a class="button button--ink" id="age-cta" href="#catalogo" data-shop-category="bebe">Ver prendas de esta etapa</a>
           </div>
         </div>
       </div>
@@ -284,7 +303,7 @@
     </section>
 
     <section class="service-strip reveal" aria-label="Ventajas de Patatines">
-      <article><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 8h17v15H3zM20 13h5l4 5v5h-9zM8 27a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/></svg><div><strong>Envíos 48/72 h</strong><span>Gratis desde 60 €</span></div></article>
+      <article><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 8h17v15H3zM20 13h5l4 5v5h-9zM8 27a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/></svg><div><strong>Elige cómo recibirlo</strong><span>Prueba envío o recogida</span></div></article>
       <article><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 27s10-6 10-15a6 6 0 0 0-10-4 6 6 0 0 0-10 4c0 9 10 15 10 15Z"/></svg><div><strong>Selección cercana</strong><span>Te ayudamos a acertar</span></div></article>
       <article><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M7 13V8l9-4 9 4v5M5 13h22v14H5zM10 27v-8h12v8"/></svg><div><strong>Tienda física</strong><span>Ven a ver y tocar</span></div></article>
     </section>
@@ -314,8 +333,9 @@
     <section class="faq section" id="faq">
       <div class="faq__heading reveal"><p class="eyebrow"><span></span> Sin dudas</p><h2>Todo lo que<br><em>quieres saber.</em></h2></div>
       <div class="faq__list reveal">
+        <details><summary>¿Se puede comprar en esta preview?<span></span></summary><p>Puedes elegir tallas, guardar favoritos, llenar la cesta y completar una compra de prueba. No se cobra nada ni se envía ningún pedido a la tienda. Los precios y las unidades disponibles son ejemplos, no una oferta de venta.</p></details>
         <details><summary>¿Qué tallas trabajáis?<span></span></summary><p>Desde primera puesta —talla 00— hasta 13/14 años. Si nos cuentas la edad y cómo talla el peque, te orientamos por WhatsApp.</p></details>
-        <details><summary>¿Hacéis envíos?<span></span></summary><p>Sí. El plazo habitual indicado es de 48/72 horas y el envío es gratuito a partir de 60 €.</p></details>
+        <details><summary>¿Cómo funcionan los envíos y la recogida?<span></span></summary><p>La preview permite probar ambas opciones. Las tarifas, los plazos, las zonas de entrega y las condiciones de cambios se confirmarán con Patatines antes de abrir la tienda real.</p></details>
         <details><summary>¿Puedo consultar si queda una talla?<span></span></summary><p>Claro. Envíanos una captura o cuéntanos qué buscas y comprobaremos las opciones disponibles.</p></details>
         <details><summary>¿Tenéis regalos para recién nacido?<span></span></summary><p>Sí, encontrarás primera puesta, accesorios, puericultura y opciones para preparar un detalle especial.</p></details>
       </div>
@@ -341,7 +361,7 @@
 
   <footer>
     <a class="brand brand--footer" href="#inicio"><img src="assets/logo-instagram.jpg" alt="" width="48" height="48"><span><strong>Patatines</strong><small>Moda infantil</small></span></a>
-    <p>Moda para crecer feliz · El Ejido, Almería</p>
+    <p>Preview de tienda · Precios, stock y compra simulados.<br>Fotos de la selección pública de Patatines. No admite pedidos reales.</p>
     <div><a href="mailto:patatines.moda.infantil92@gmail.com">Email</a><a href="https://www.instagram.com/patatines.moda.infantil/" target="_blank" rel="noopener">Instagram</a><a href="tel:+34623992413">Teléfono</a></div>
   </footer>
 
@@ -349,7 +369,39 @@
     <span class="mascot-helper__bubble">¿Buscamos su talla?</span>
     <span class="helper-doll" aria-hidden="true"><i class="helper-doll__hair"></i><i class="helper-doll__eyes"></i><i class="helper-doll__smile"></i><i class="helper-doll__bow"></i></span>
   </a>
-  <a class="mobile-sticky" href="https://wa.me/34623992413?text=Hola%20Patatines%2C%20me%20ayud%C3%A1is%20a%20encontrar%20algo%3F" target="_blank" rel="noopener"><span>¿Te ayudamos a elegir?</span><strong>Escríbenos</strong></a>
+  <button class="mobile-sticky" data-open-cart><span>Un poquito de ilusión</span><strong>Mi cesta · <span data-cart-count>0</span> ↗</strong></button>
+<dialog id="product-modal" class="shop-dialog" aria-labelledby="product-title"><button type="button" class="dialog-close" data-close aria-label="Cerrar ficha de producto">×</button><div id="product-detail" class="product-detail"></div></dialog>
+  <dialog id="cart-modal" class="shop-dialog cart-dialog" aria-labelledby="cart-title"><button type="button" class="dialog-close" data-close aria-label="Cerrar cesta">×</button><div class="cart-inner"><p class="eyebrow">Elegido con mimo</p><h2 id="cart-title">Tu pequeña gran cesta.</h2><p class="cart-notice">Estás probando una demo. Importes y stock ficticios.</p><div class="shipping-meter"><i id="shipping-bar"></i></div><p id="shipping-progress"></p><div id="cart-lines" class="cart-lines"></div><div class="cart-summary"><div class="total-line"><span>Subtotal demo</span><strong id="cart-subtotal"></strong></div><button class="button button--coral" id="cart-checkout">Probar compra ↗</button><p class="demo-fine">Sin cobros ni pedidos reales. Envío calculado en el siguiente paso.</p></div></div></dialog>
+<dialog id="checkout-modal" class="shop-dialog checkout-dialog" aria-labelledby="checkout-title">
+    <button type="button" class="dialog-close" data-close aria-label="Cerrar compra de prueba">×</button>
+    <div class="checkout-inner">
+      <form id="checkout-form">
+        <p class="eyebrow">Solo estamos probando</p>
+        <h2 id="checkout-title">El último pasito.</h2>
+        <p class="checkout-demo-note">Simulación sin cobros. No introduzcas datos personales ni tarjetas. No se envía ningún pedido a Patatines.</p>
+        <fieldset><legend>¿Cómo lo recibirías?</legend>
+          <label class="delivery-option"><input type="radio" name="delivery" value="pickup" checked><span>Recoger en El Ejido<small>Opción propuesta para la tienda · sin coste en esta demo</small></span></label>
+          <label class="delivery-option"><input type="radio" name="delivery" value="shipping"><span>Envío a domicilio<small>Tarifa de ejemplo: 4,95 € · gratis desde 60 €</small></span></label>
+        </fieldset>
+        <p>Envío <strong id="checkout-shipping"></strong></p>
+        <div class="total-line"><span>Total de prueba</span><strong id="checkout-total"></strong></div>
+        <p class="field-error" id="checkout-error" role="alert"></p>
+        <button type="submit" class="button button--coral">Simular pedido · sin pagar ↗</button>
+        <p class="demo-fine">Importes y stock ficticios. No es un checkout de Shopify ni una pasarela bancaria.</p>
+      </form>
+      <div id="checkout-success" hidden>
+        <div class="success-mark" aria-hidden="true">✓</div><p class="eyebrow">Así de fácil podría ser</p>
+        <h2>¡Prueba completada!</h2><p>No se ha cobrado nada ni se ha enviado un pedido.</p>
+        <div class="order-receipt"><span id="order-number"></span><strong id="order-total"></strong><small>Sin valor fiscal · simulación local</small></div>
+        <p>El stock de prueba se ha actualizado. Puedes verlo también en la demo de caja dentro de este mismo navegador.</p>
+        <button type="button" class="button button--ink" data-close>Seguir explorando</button>
+      </div>
+    </div>
+  </dialog>
+  <div class="shop-toast" id="shop-toast" role="status" aria-live="polite"></div>
+  <button class="motion-pause" aria-label="Pausar animaciones" aria-pressed="false" id="shop-motion">Ⅱ</button>
   <script src="script.js?v=20260925-mobile-motion"></script>
+  <script src="catalog.js?v=20260925-shop"></script>
+  <script src="shop.js?v=20260925-shop"></script>
 </body>
 </html>

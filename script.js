@@ -139,7 +139,8 @@ document.querySelectorAll('.age-tab').forEach(tab => tab.addEventListener('click
     ageEls.title.innerHTML = data.title;
     ageEls.text.textContent = data.text;
     ageEls.tags.innerHTML = data.tags.map(tag => `<span>${tag}</span>`).join('');
-    ageEls.cta.href = `https://wa.me/34623992413?text=${encodeURIComponent(`Hola Patatines, busco ${data.query}. ¿Me ayudáis a elegir?`)}`;
+    ageEls.cta.href = '#catalogo';
+    ageEls.cta.dataset.shopCategory = {newborn:'bebe',mini:'mini',kids:'junior',junior:'junior'}[tab.dataset.age];
     ageEls.image.classList.remove('is-changing');
     replayClass(ageEls.card, 'is-celebrating');
   }, prefersReducedMotion ? 0 : 180);

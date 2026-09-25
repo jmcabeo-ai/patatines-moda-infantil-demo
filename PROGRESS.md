@@ -13,16 +13,18 @@
 
 ## Objetivo
 
-Crear una demostración web con identidad propia para Patatines Moda Infantil, orientada a descubrir productos, generar deseo y convertir visitas en consultas o pedidos.
+Crear una demostración de tienda online con identidad propia para Patatines Moda Infantil, con catálogo, variantes, cesta y una caja de prueba. La preview no admite pedidos ni cobros reales.
 
 ## Criterios
 
 - Utilizar únicamente información verificable o marcar con claridad los elementos de demostración.
-- No inventar precios, promociones, stock, opiniones ni condiciones comerciales.
+- No presentar precios, promociones, stock ni condiciones ficticias como reales. Los ejemplos necesarios para probar el comercio se etiquetan expresamente como simulación.
 - Priorizar experiencia móvil, accesibilidad, rendimiento y conversión.
 
 ## Registro
 
+- 2026-09-25: nueva petición: convertir la preview en tienda online con catálogo, variantes, carrito y checkout simulado; comparar Shopify/POS, GHL y desarrollo propio y preparar presupuesto orientativo. Se conservan identidad colorida y personajes animados. No se contratan plataformas ni se activan cobros.
+- 2026-09-25: Instagram revisado directamente; marcas, prendas y tallas de publicaciones identificadas. Web oficial redirige a un acceso sin catálogo accesible. Precios/stock de preview serán explícitamente ficticios. Investigación comercial y presupuesto se guardan fuera del repositorio público.
 - 2026-09-24: proyecto iniciado a partir del perfil público de Instagram facilitado por el usuario.
 - 2026-09-24: identidad planteada como boutique infantil editorial, cálida y juguetona; se incorporan selector por edades, recomendador de regalos, contacto por WhatsApp y visita a tienda.
 - 2026-09-24: fotografías públicas recientes del perfil oficial descargadas como recursos locales para evitar dependencias temporales de Instagram.
@@ -47,4 +49,9 @@ Crear una demostración web con identidad propia para Patatines Moda Infantil, o
 - Marcas mostradas recientemente: Mayoral, Abel & Lula, Little Dutch y Mac Ilusión.
 - Avenida Príncipes de España, 92, 04700 El Ejido, Almería.
 - Teléfono: +34 623 99 24 13.
-- Envíos 48/72 h y gratuitos desde 60 €.
+- Envíos 48/72 h y gratuitos desde 60 €: dato de investigación inicial, no revalidado para la tienda actual. No se mantiene como promesa comercial de la preview; las tarifas de compra de prueba se indican como ejemplos.
+- 2026-09-25: implementado catálogo con ocho productos fotografiados en su Instagram, seis categorías, filtro por marca, búsqueda y ordenación; fichas con tallas, favoritos persistentes, cesta editable, envío/recogida y compra simulada.
+- 2026-09-25: incorporada caja de demostración en tpv.html. Cestas separadas y existencias compartidas mediante almacenamiento local del mismo navegador/origen; no hay backend, datáfono ni sincronización entre dispositivos.
+- 2026-09-25: superadas 12 pruebas unitarias de variantes, límites, stock compartido, envío, duplicados y saneamiento. QA en navegador: compra online y caja, agotamiento de talla entre pestañas, favoritos tras recarga, búsqueda, ordenación, menú táctil y reinicio de datos. Revisados móvil de 390 px y caja a 1440 px, sin desbordamiento horizontal ni errores JS registrados.
+- 2026-09-25: verificación de datos distingue producto publicado de disponibilidad actual. Se retiran promesas de envío no revalidadas; la demo muestra precios/stock ficticios y no se indexa. Propuesta comercial y fuentes ampliadas se mantienen fuera del repositorio público.
+- 2026-09-25: README actualizado y grafo local de código regenerado. Versión ecommerce preparada para publicar en la misma URL de GitHub Pages; comprobación pública pendiente de despliegue.

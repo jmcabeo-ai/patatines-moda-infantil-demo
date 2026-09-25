@@ -1,0 +1,4 @@
+.internal/
+tests/
+graphify-out/
+.graphify/
